@@ -16,11 +16,13 @@
  	<body>
  		<h1>Hello, World!</h1>
  		<p>Go ahead and add your content!</p>
-    <ul class="people-list">
-    {{#peopleList}}
-    <li>{{text}}</li>
-
-    {{/peopleList}}
-    </ul>
+    <div class="people-list">
+      <!-- #users loops/maps thru everything under data.users -->
+    {{#users}}
+      <div class="robotholder">
+        <p>{{name}}</p>
+      </div>
+    {{/users}}
+  </div>
  	</body>
  </html>
