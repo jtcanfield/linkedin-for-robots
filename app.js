@@ -1,7 +1,6 @@
 const express = require('express');
 const app = express();
 const port = 3000;
-const path = require('path');
 const mustacheExpress = require('mustache-express');
 const data = require('./data.js');
 app.use(express.static(__dirname + '/public'));
@@ -18,7 +17,7 @@ app.get("/index/:username", function (req, res) {
     return obj.username == req.params.username;
   });
     res.render('profile',thisUser[0])
-})
+});
 
 /*
 app.get('/index/:requestedid', function (req, res) {
