@@ -15,8 +15,11 @@ html{
   color: red;
 }
 .imageholder{
-  border-radius: 100000px;
   float: left;
+  height: 300px;
+}
+.imageholder img{
+  border-radius: 100000px;
 }
 .profileholder{
   width: 50%;
@@ -24,4 +27,7 @@ html{
 }
 .inline{
   display: inline;
+}
+#profileinfo{
+  text-align: left;
 }

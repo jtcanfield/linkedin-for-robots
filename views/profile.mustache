@@ -19,14 +19,13 @@
           <img src="{{avatar}}">
         </div>
         <div id="profileinfo">
-          <h1>{{name}}</h1>
+          <h1><br>{{name}}</h1>
           {{#address.city}}
-            <p>{{address.city}}, {{address.country}} | {{job}}, {{company}}</p>
+            <p>{{address.city}}, {{address.country}} | {{job}}, {{company}}<br>{{email}} | {{phone}}</p>
           {{/address.city}}
           {{^address.city}}
-            <p>{{address.country}} | {{job}}, {{company}}</p>
+            <p>{{address.country}} | {{job}}, {{company}}<br>{{email}} | {{phone}}</p>
           {{/address.city}}
-            <p>{{email}} | {{phone}}</p>
           {{#university}}
             <h3>Education</h3>
             <p>{{university}}</p>
@@ -42,6 +41,7 @@
         </div>
       </div>
     </div>
+    <br><br><br><br>
     <a href="/index"><h2>Go Back</h2></a>
  	</body>
  </html>
