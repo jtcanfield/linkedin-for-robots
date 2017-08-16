@@ -20,20 +20,13 @@
         </div>
         <div id="profileinfo">
           <h1>{{name}}</h1>
-          {{#address.city}}
-            <p>{{address.city}}, {{address.country}} | {{job}}, {{company}}<br>{{email}} | {{phone}}</p>
-          {{/address.city}}
-          {{^address.city}}
-            <p>{{address.country}} | {{job}}, {{company}}<br>{{email}} | {{phone}}</p>
-          {{/address.city}}
+            <p>{{#address.city}}{{address.city}}, {{/address.city}}{{address.country}} | {{#job}}{{job}}, {{/job}}{{^job}}<span class="nojob">Available for Hire</span>{{/job}}{{company}}<br>{{email}} | {{phone}}</p>
           {{#university}}
             <h3>Education</h3>
             <p>{{university}}</p>
           {{/university}}
-          {{^university}}
-          {{/university}}
-          <strong class="inline">Skills</strong><br>
-          <p class="inline">
+          <strong>Skills</strong><br>
+          <p>
             {{#skills}}
             {{.}}<br>
             {{/skills}}

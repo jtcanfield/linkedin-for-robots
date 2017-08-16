@@ -24,9 +24,7 @@ html{
   width: 50%;
   margin: auto;
 }
-.inline{
-  display: inline;
-}
 #profileinfo{
   text-align: left;
+  display: inline;
 }
