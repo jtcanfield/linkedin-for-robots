@@ -19,7 +19,12 @@
       <div class="robotholder">
         <img src="{{avatar}}">
         <a href="/index/{{id}}"><h2>{{name}}</h2></a>
-        <p>{{job}}</p>
+        {{#job}}
+          <p>{{job}}</p>
+        {{/job}}
+        {{^job}}
+          <p>NoJob</p>
+        {{/job}}
       </div>
     {{/users}}
   </div>

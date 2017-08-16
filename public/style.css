@@ -1,5 +1,6 @@
 .robotholder{
-  border: 50px solid blue;
+  border: 5px solid blue;
+  display: inline-block;
 }
 .people-list{
   display: inline;

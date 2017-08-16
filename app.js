@@ -6,8 +6,8 @@ const mustacheExpress = require('mustache-express');
 const data = require('./data.js');
 app.use(express.static(__dirname + '/public'));
 app.engine('mustache', mustacheExpress());
-app.set('view engine', 'mustache');
 app.set('views', './views');
+app.set('view engine', 'mustache');
 
 app.get('/index/', function (req, res) {
   res.render('index', data);
