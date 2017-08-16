@@ -1,3 +1,6 @@
+html{
+  text-align: center;
+}
 .robotholder{
   border: 5px solid blue;
   display: inline-block;
@@ -11,4 +14,7 @@
 
 .profileholder img{
   border-radius: 100000px;
+}
+.inline{
+  display: inline;
 }

@@ -17,15 +17,26 @@
       <div class="profileholder">
         <img src="{{avatar}}">
         <h1>{{name}}</h1>
+        {{#address.city}}
         <p>{{address.city}}, {{address.country}} | {{job}}, {{company}}</p>
+        {{/address.city}}
+        {{^address.city}}
+        <p>{{address.country}} | {{job}}, {{company}}</p>
+        {{/address.city}}
         <p>{{email}} | {{phone}}</p>
-        <h3>Education</h3>
-        <p>{{university}}</p>
-        <h3>Skills</h3>
-        {{#skills}}
-        <li>{{.}}</li>
-        {{/skills}}
+        {{#university}}
+          <h3>Education</h3>
+          <p>{{university}}</p>
+        {{/university}}
+        {{^university}}  {{/university}}
+        <strong class="inline">Skills</strong><br>
+        <p class="inline">
+          {{#skills}}
+          {{.}}<br>
+          {{/skills}}
+        </p>
       </div>
     </div>
+    <a href="/index"><h2>Go Back</h2></a>
  	</body>
  </html>
