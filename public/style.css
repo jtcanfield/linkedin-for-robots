@@ -5,3 +5,6 @@
 .people-list{
   display: inline;
 }
+.nojob{
+  color: red;
+}
