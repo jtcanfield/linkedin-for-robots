@@ -13,23 +13,23 @@
     <link rel="stylesheet" type="text/css" href="/style.css">
  	</head>
  	<body>
-    <div class="people-list">
-      <div class="profileholder">
-        <div class="imageholder">
-          <img src="{{avatar}}">
-        </div>
-        <div id="profileinfo">
-          <h1>{{name}}</h1>
-            <p>{{#address.city}}{{address.city}}, {{/address.city}}{{address.country}} | {{#job}}{{job}}, {{/job}}{{^job}}<span class="nojob">Available for Hire</span>{{/job}}{{company}}<br>{{email}} | {{phone}}</p>
+    <div class="profileholder">
+      <img src="{{avatar}}">
+      <h1>{{name}}</h1>
+      <p>{{#address.city}}{{address.city}}, {{/address.city}}{{address.country}} | {{#job}}{{job}}, {{/job}}{{^job}}<span class="nojob">Available for Hire</span>{{/job}}{{company}}<br>{{email}} | {{phone}}</p>
+      <div class="schoolnskills">
+        <div class="education">
           {{#university}}
-            <h3>Education</h3>
+            <strong>Education</strong>
             <p>{{university}}</p>
           {{/university}}
-          <strong>Skills</strong><br>
+        </div>
+        <div class="education">
+          <strong>Skills</strong>
           <p>
-            {{#skills}}
-            {{.}}<br>
-            {{/skills}}
+          {{#skills}}
+          {{.}}<br>
+          {{/skills}}
           </p>
         </div>
       </div>

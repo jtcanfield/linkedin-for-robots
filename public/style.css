@@ -14,15 +14,14 @@ html{
 .nojob{
   color: red;
 }
-.imageholder{
-  float: left;
-}
-.imageholder img{
+.profileholder img{
   border-radius: 100000px;
+  float: left;
 }
 .profileholder{
   width: 50%;
   margin: auto;
+  text-align: left;
 }
 #profileinfo{
   text-align: left;
