@@ -15,8 +15,10 @@
  	<body>
     <div class="people-list">
       <div class="profileholder">
-        <div id="profileheader">
+        <div class="imageholder">
           <img src="{{avatar}}">
+        </div>
+        <div id="profileinfo">
           <h1>{{name}}</h1>
           {{#address.city}}
             <p>{{address.city}}, {{address.country}} | {{job}}, {{company}}</p>
@@ -25,19 +27,19 @@
             <p>{{address.country}} | {{job}}, {{company}}</p>
           {{/address.city}}
             <p>{{email}} | {{phone}}</p>
+          {{#university}}
+            <h3>Education</h3>
+            <p>{{university}}</p>
+          {{/university}}
+          {{^university}}
+          {{/university}}
+          <strong class="inline">Skills</strong><br>
+          <p class="inline">
+            {{#skills}}
+            {{.}}<br>
+            {{/skills}}
+          </p>
         </div>
-        {{#university}}
-          <h3>Education</h3>
-          <p>{{university}}</p>
-        {{/university}}
-        {{^university}}
-        {{/university}}
-        <strong class="inline">Skills</strong><br>
-        <p class="inline">
-          {{#skills}}
-          {{.}}<br>
-          {{/skills}}
-        </p>
       </div>
     </div>
     <a href="/index"><h2>Go Back</h2></a>
