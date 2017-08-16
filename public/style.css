@@ -2,8 +2,11 @@ html{
   text-align: center;
 }
 .robotholder{
-  border: 5px solid blue;
+  border: 1px solid grey;
   display: inline-block;
+  width: 230px;
+  height: 266px;
+  margin: 5px;
 }
 .people-list{
   display: inline;
@@ -11,7 +14,6 @@ html{
 .nojob{
   color: red;
 }
-
 .profileholder img{
   border-radius: 100000px;
 }

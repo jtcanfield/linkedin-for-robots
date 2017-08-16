@@ -15,20 +15,23 @@
  	<body>
     <div class="people-list">
       <div class="profileholder">
-        <img src="{{avatar}}">
-        <h1>{{name}}</h1>
-        {{#address.city}}
-        <p>{{address.city}}, {{address.country}} | {{job}}, {{company}}</p>
-        {{/address.city}}
-        {{^address.city}}
-        <p>{{address.country}} | {{job}}, {{company}}</p>
-        {{/address.city}}
-        <p>{{email}} | {{phone}}</p>
+        <div>
+          <img src="{{avatar}}">
+          <h1>{{name}}</h1>
+          {{#address.city}}
+            <p>{{address.city}}, {{address.country}} | {{job}}, {{company}}</p>
+          {{/address.city}}
+          {{^address.city}}
+            <p>{{address.country}} | {{job}}, {{company}}</p>
+          {{/address.city}}
+            <p>{{email}} | {{phone}}</p>
+        </div>
         {{#university}}
           <h3>Education</h3>
           <p>{{university}}</p>
         {{/university}}
-        {{^university}}  {{/university}}
+        {{^university}}
+        {{/university}}
         <strong class="inline">Skills</strong><br>
         <p class="inline">
           {{#skills}}
