@@ -4,7 +4,6 @@ const port = 3000;
 const path = require('path');
 const mustacheExpress = require('mustache-express');
 const data = require('./data.js');
-// const functionfordata = require('./functions.js');
 app.engine('mustache', mustacheExpress());
 // app.use('/nodeapp', express.static(__dirname + '/nodeapp'));
 app.set('view engine', 'mustache');
@@ -14,11 +13,17 @@ app.get('/index/', function (req, res) {
   res.render('index', data);
 });
 
-// {"Name": `${data.users[0].name}`},
-
 app.get("/:dynamic", function (req, res){
-  // console.log(req);
-  res.send(`You typed ${req.url}`)
+  console.log(req.params.dynamic);
+
+  let thisUser = data.users.filter(function(obj){
+    return obj.username == req.params.dynamic;
+  })
+
+  var requestid = `${req.params.dynamic}`
+  // var request = data.req
+  res.send(thisUser);
+  // res.send(`You typed ${requestid} but that is not a page`)
 });
 
 

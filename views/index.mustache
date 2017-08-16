@@ -11,7 +11,6 @@
  		<!-- Use maximum-scale and user-scalable at your own risk. It disables pinch/zoom. Think about usability/accessibility before including.-->
  		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
  		<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
- 		<link rel="stylesheet" type="text/css" href=" ">
  	</head>
  	<body>
  		<h1>Hello, World!</h1>
@@ -20,9 +19,20 @@
       <!-- #users loops/maps thru everything under data.users -->
     {{#users}}
       <div class="robotholder">
-        <p>{{name}}</p>
+        <img src="{{avatar}}">
+
+        <a href="/index/{{id}}"><h2>{{name}}</h2></a>
+        <p>{{job}}</p>
       </div>
     {{/users}}
+    <style>
+    .robotholder{
+      border: 1px solid blue;
+    }
+    .people-list{
+      display: inline;
+    }
+    </style>
   </div>
  	</body>
  </html>
