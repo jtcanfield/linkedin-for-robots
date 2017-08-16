@@ -3,6 +3,7 @@ const app = express();
 const port = 3000;
 const path = require('path');
 const mustacheExpress = require('mustache-express');
+const data = require('./data.js');
 app.engine('mustache', mustacheExpress());
 app.use('/nodeapp', express.static(__dirname + '/nodeapp'));
 app.set('view engine', 'mustache');
@@ -24,7 +25,7 @@ app.get('/', function (req, res) {
   {"text": "Learn how to use Sequelize"}
 ]})
 })
-console.log();
+console.log(data);
 
 app.get("/:dynamic", function (req, res){
   // console.log(req);
