@@ -14,24 +14,22 @@
  	</head>
  	<body>
     <div class="profileholder">
-      <img src="{{avatar}}">
-      <h1>{{name}}</h1>
-      <p>{{#address.city}}{{address.city}}, {{/address.city}}{{address.country}} | {{#job}}{{job}}, {{/job}}{{^job}}<span class="nojob">Available for Hire</span>{{/job}}{{company}}<br>{{email}} | {{phone}}</p>
+      <div class="headerinfo">
+        <img src="{{avatar}}">
+        <h1>{{name}}</h1>
+        <p>{{#address.city}}{{address.city}}, {{/address.city}}{{address.country}} | {{#job}}{{job}}, {{/job}}{{^job}}<span class="nojob">Available for Hire</span>{{/job}}{{company}}<br>{{email}} | {{phone}}</p>
+      </div>
       <div class="schoolnskills">
-        <div class="education">
-          {{#university}}
-            <strong>Education</strong>
-            <p>{{university}}</p>
-          {{/university}}
-        </div>
-        <div class="education">
-          <strong>Skills</strong>
-          <p>
-          {{#skills}}
-          {{.}}<br>
-          {{/skills}}
-          </p>
-        </div>
+        {{#university}}
+          <strong>Education</strong>
+          <p>{{university}}</p>
+        {{/university}}
+        <strong>Skills</strong>
+        <p>
+        {{#skills}}
+        {{.}}<br>
+        {{/skills}}
+        </p>
       </div>
     </div>
     <br><br><br><br>

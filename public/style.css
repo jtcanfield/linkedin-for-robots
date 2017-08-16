@@ -27,3 +27,14 @@ html{
   text-align: left;
   display: inline;
 }
+.headerinfo{
+  height: 150px;
+}
+.schoolnskills strong{
+  width: 150px;
+  float:left;
+  text-align: right;
+}
+.schoolnskills p{
+  margin-left: 160px;
+}
