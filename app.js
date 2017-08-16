@@ -8,10 +8,12 @@ app.engine('mustache', mustacheExpress());
 app.set('views', './views');
 app.set('view engine', 'mustache');
 
+// renders all data on the /index page
 app.get('/index/', function (req, res) {
   res.render('index', data);
 });
 
+//dynamically gets whats type in after index/, assigns it to username from req.params, and filters thru the users to find which one has that username
 app.get("/index/:username", function (req, res) {
  let thisUser = data.users.filter(function( obj ) {
     return obj.username == req.params.username;
