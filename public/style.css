@@ -20,3 +20,6 @@ html{
 .inline{
   display: inline;
 }
+#profileheader img{
+  float: left;
+}
