@@ -16,22 +16,9 @@
  		<h1>Hello, World!</h1>
  		<p>Go ahead and add your content!</p>
     <div class="people-list">
-      <!-- #users loops/maps thru everything under data.users -->
-    {{#users}}
       <div class="robotholder">
-        <img src="{{avatar}}">
-        <a href="/index/{{id}}"><h2>{{name}}</h2></a>
-        <p>{{job}}</p>
+        <h2>{{name}}</h2>
       </div>
-    {{/users}}
-    <style>
-    .robotholder{
-      border: 1px solid blue;
-    }
-    .people-list{
-      display: inline;
-    }
-    </style>
-  </div>
+    </div>
  	</body>
  </html>

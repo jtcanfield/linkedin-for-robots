@@ -13,18 +13,26 @@ app.get('/index/', function (req, res) {
   res.render('index', data);
 });
 
-app.get("/:dynamic", function (req, res){
-  console.log(req.params.dynamic);
 
-  let thisUser = data.users.filter(function(obj){
-    return obj.username == req.params.dynamic;
-  })
-
-  var requestid = `${req.params.dynamic}`
-  // var request = data.req
-  res.send(thisUser);
-  // res.send(`You typed ${requestid} but that is not a page`)
+app.get('/index/:requestedid', function (req, res) {
+  var userid = req.params.requestedid;
+  var userindex = userid-1;
+  res.render('profile', data.users[userindex]);
 });
+
+
+// app.get("/:dynamic", function (req, res){
+//   console.log(req.params.dynamic);
+//
+//   let thisUser = data.users.filter(function(obj){
+//     return obj.username == req.params.dynamic;
+//   })
+//
+//   var requestid = `${req.params.dynamic}`
+//   // var request = data.req
+//   res.send(thisUser);
+//   // res.send(`You typed ${requestid} but that is not a page`)
+// });
 
 
 app.listen(port, function(){
