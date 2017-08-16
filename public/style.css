@@ -8,3 +8,7 @@
 .nojob{
   color: red;
 }
+
+.profileholder img{
+  border-radius: 100000px;
+}
