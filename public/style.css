@@ -16,7 +16,6 @@ html{
 }
 .imageholder{
   float: left;
-  height: 300px;
 }
 .imageholder img{
   border-radius: 100000px;
