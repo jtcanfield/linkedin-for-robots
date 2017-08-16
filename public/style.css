@@ -14,27 +14,27 @@ html{
 .nojob{
   color: red;
 }
-.profileholder img{
-  border-radius: 100000px;
-  float: left;
-}
 .profileholder{
   width: 50%;
   margin: auto;
   text-align: left;
 }
-#profileinfo{
-  text-align: left;
-  display: inline;
-}
 .headerinfo{
-  height: 150px;
+  height: 155px;
+}
+.headerinfo img{
+  border-radius: 100000px;
+  float: left;
+  border: 1px solid grey;
+}
+.headerinfo p, .headerinfo h1{
+  margin-left: 165px;
 }
 .schoolnskills strong{
-  width: 150px;
+  width: 155px;
   float:left;
   text-align: right;
 }
 .schoolnskills p{
-  margin-left: 160px;
+  margin-left: 165px;
 }
